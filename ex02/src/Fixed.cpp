@@ -6,7 +6,7 @@
 /*   By: svolodin <svolodin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 09:01:30 by svolodin          #+#    #+#             */
-/*   Updated: 2024/04/29 14:18:07 by svolodin         ###   ########.fr       */
+/*   Updated: 2024/04/29 14:21:49 by svolodin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,32 +64,6 @@ Fixed  Fixed::operator+( const Fixed& num) const
 
   return Fixed(this->toFloat() + num.toFloat());
 }
-
-Fixed  Fixed::operator-( const Fixed& num) const
-{
-  std::cout << FGRN("Subtraction operation called with: ") << this->toFloat();
-  std::cout << FGRN(" and ") << num << std::endl;
-
-  return Fixed(this->toFloat() - num.toFloat());
-}
-
-Fixed Fixed::operator*( const Fixed& num) const
-{
-  std::cout << FGRN("Multiplication operation called with: ") << this->toFloat();
-  std::cout << FGRN(" and ") << num << std::endl;
-
-  return Fixed(this->toFloat() * num.toFloat());
-}
-
-
-Fixed Fixed::operator/( const Fixed& num) const
-{
-  std::cout << FGRN("Division operation called with: ") << this->toFloat();
-  std::cout << FGRN(" and ") << num << std::endl;
-
-  return Fixed(this->toFloat() / num.toFloat());
-}
-
 
 int Fixed::getRawBits( void ) const
 {
