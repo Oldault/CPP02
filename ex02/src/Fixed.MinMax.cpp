@@ -1,27 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Fixed.MinMax.cpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: svolodin <svolodin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/29 09:01:33 by svolodin          #+#    #+#             */
-/*   Updated: 2024/04/29 15:06:38 by svolodin         ###   ########.fr       */
+/*   Created: 2024/04/29 14:56:19 by svolodin          #+#    #+#             */
+/*   Updated: 2024/04/29 15:03:39 by svolodin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-int main(void)
+Fixed& Fixed::min(Fixed& x, Fixed& y)
 {
-  Fixed a;
-  Fixed const b(Fixed(5.05f) * Fixed(2));
-  std::cout << a << std::endl;
-  std::cout << ++a << std::endl;
-  std::cout << a << std::endl;
-  std::cout << a++ << std::endl;
-  std::cout << a << std::endl;
-  std::cout << b << std::endl;
-  std::cout << Fixed::max(a, b) << std::endl;
-  return 0;
+  if (x <= y) {
+    return x;
+  }
+  return y;
+}
+
+const Fixed& Fixed::min(const Fixed& x, const Fixed& y)
+{
+  if (x <= y) {
+    return x;
+  }
+  return y;
+}
+
+Fixed& Fixed::max(Fixed& x, Fixed& y)
+{
+  if (x >= y) {
+    return x;
+  }
+  return y;
+}
+
+const Fixed& Fixed::max(const Fixed& x, const Fixed& y)
+{
+  if (x >= y) {
+    return x;
+  }
+  return y;
 }

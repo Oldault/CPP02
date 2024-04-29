@@ -6,7 +6,7 @@
 /*   By: svolodin <svolodin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 09:01:43 by svolodin          #+#    #+#             */
-/*   Updated: 2024/04/29 14:44:11 by svolodin         ###   ########.fr       */
+/*   Updated: 2024/04/29 15:07:43 by svolodin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class Fixed
 
   public:
 
+    /* Canonic Orthodox Form */
     Fixed();
     Fixed( const int x );
     Fixed( const float x );
@@ -54,11 +55,19 @@ class Fixed
     Fixed operator++( int );
     Fixed operator--( int );
 
+    /* Min & Max */
+    static Fixed& min(Fixed& x, Fixed& y);
+    static const Fixed& min(const Fixed& x, const Fixed& y);
+    static Fixed& max(Fixed& x, Fixed& y);
+    static const Fixed& max(const Fixed& x, const Fixed& y);
+
+    /* Utils */
     int getRawBits( void ) const;
     void  setRawBits( int const raw );
 
     float toFloat( void ) const;
     int toInt( void ) const;
+
 };
 
 std::ostream& operator<<( std::ostream& o, const Fixed& src);
