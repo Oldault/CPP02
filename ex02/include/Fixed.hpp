@@ -6,7 +6,7 @@
 /*   By: svolodin <svolodin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 09:01:43 by svolodin          #+#    #+#             */
-/*   Updated: 2024/04/29 14:24:37 by svolodin         ###   ########.fr       */
+/*   Updated: 2024/04/29 14:44:11 by svolodin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,12 @@ class Fixed
     bool  operator<=( const Fixed& x) const;
     bool  operator==( const Fixed& x) const;
     bool  operator!=( const Fixed& x) const;
+
+    /* Incremantation & decremantation Operators */
+    Fixed& operator++( void );
+    Fixed& operator--( void );
+    Fixed operator++( int );
+    Fixed operator--( int );
 
     int getRawBits( void ) const;
     void  setRawBits( int const raw );
