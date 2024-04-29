@@ -6,7 +6,7 @@
 /*   By: svolodin <svolodin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 09:01:43 by svolodin          #+#    #+#             */
-/*   Updated: 2024/04/29 09:29:08 by svolodin         ###   ########.fr       */
+/*   Updated: 2024/04/29 10:05:24 by svolodin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Fixed
   private:
 
     int _value;
-    static const int _fractional_bits = 8;
+    static const int _scale = 8;
 
   public:
 
@@ -33,6 +33,7 @@ class Fixed
 
     int getRawBits( void ) const;
     void  setRawBits( int const raw );
+  
 };
 
 #endif /* _FIXED_HPP_ */
