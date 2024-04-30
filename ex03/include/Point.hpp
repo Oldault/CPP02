@@ -6,7 +6,7 @@
 /*   By: svolodin <svolodin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 15:22:37 by svolodin          #+#    #+#             */
-/*   Updated: 2024/04/29 15:43:32 by svolodin         ###   ########.fr       */
+/*   Updated: 2024/04/30 08:25:49 by svolodin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,12 @@ class Point
     ~Point();
 
     Point& operator=( const Point& src);
+    
+    Fixed getX( void ) const ;
+    Fixed getY( void ) const ;
 
 };
+
+bool bsp( Point const a, Point const b, Point const c, Point const point);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: svolodin <svolodin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 09:01:30 by svolodin          #+#    #+#             */
-/*   Updated: 2024/04/29 15:05:40 by svolodin         ###   ########.fr       */
+/*   Updated: 2024/04/30 08:43:46 by svolodin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,4 +73,11 @@ std::ostream& operator<<( std::ostream& o, const Fixed& src)
 {
   o << src.toFloat();
   return o;
+}
+
+Fixed Fixed::abs( void ) const
+{
+  if (_value < 0)
+    return Fixed(_value * -1);
+  return *this;
 }

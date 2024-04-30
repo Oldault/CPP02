@@ -6,7 +6,7 @@
 /*   By: svolodin <svolodin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 09:01:43 by svolodin          #+#    #+#             */
-/*   Updated: 2024/04/29 15:07:43 by svolodin         ###   ########.fr       */
+/*   Updated: 2024/04/30 08:38:55 by svolodin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,8 @@ class Fixed
 
     float toFloat( void ) const;
     int toInt( void ) const;
+
+    Fixed abs( void ) const;
 
 };
 

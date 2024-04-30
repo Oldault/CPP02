@@ -6,7 +6,7 @@
 /*   By: svolodin <svolodin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 15:41:42 by svolodin          #+#    #+#             */
-/*   Updated: 2024/04/29 16:00:37 by svolodin         ###   ########.fr       */
+/*   Updated: 2024/04/30 08:26:22 by svolodin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,14 @@ Point&  Point::operator=( const Point& src)
 {
   (void)src;
   return *this;
+}
+
+Fixed Point::getX( void ) const
+{
+  return _x;
+}
+
+Fixed Point::getY( void ) const
+{
+  return _y;
 }
